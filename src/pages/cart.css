@@ -1,0 +1,71 @@
+/* CartPage.css */
+
+/* Container for the entire cart page */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title of the cart page */
+.cart-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Welcome message for logged-in users */
+.welcome-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Message for empty cart */
+.empty-cart-message {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Summary of total products in cart */
+.cart-summary {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* List of products in the cart */
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual product item in the cart */
+.product-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Title of the product */
+.product-item h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+/* Price of the product */
+.product-price {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Button to remove product from the cart */
+.remove-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Style the remove button on hover */
+.remove-button:hover {
+    background-color: #c82333;
+}

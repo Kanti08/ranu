@@ -1,0 +1,21 @@
+.color{
+    background-color:  #2E0052;
+    font: #FFFFFF;
+    text-align: center;
+        position: fixed;
+        left: 0;
+        padding: 8px;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+}
+h5 {
+    color:#FFFFFF;;
+   
+    font-size: 26.41px;
+    /* Font size */
+
+    /* Font weight */
+    font-family: Roboto;
+   
+}

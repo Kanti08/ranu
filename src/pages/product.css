@@ -1,0 +1,11 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    /* Four columns */
+    gap: 60px;
+    /* Adjust the gap between cards */
+}
+
+.product-col {
+    width: 100%;
+}

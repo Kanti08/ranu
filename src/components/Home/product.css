@@ -1,0 +1,37 @@
+.product-card {
+   padding: 0;
+  
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    flex: 0 0 200px;
+    /* Fixed width for the image */
+    
+    /* Add border between image and content */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border: 40px solid rgba(212, 229, 255, 1);; /* Add border around the image */
+}
+
+.product-details {
+    flex: 1;
+    /* Grow to fill remaining space */
+    padding: 10px;
+}
+
+.product-title {
+    margin-top: 0;
+}
+
+.product-description {
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: bold;
+}
