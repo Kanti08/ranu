@@ -2,3 +2,24 @@
 background-color: #2E0052;
       
 }
+.nav-link-link.text-white {
+    
+            background-color: #1D7000;
+            border: none;
+            color: white;
+            padding: 4px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+           
+            margin-top: 20px;
+        
+}
+.nav-link-link.text-white:hover {
+    background-color: #1D7000;
+  
+    /* Darker green background on hover */
+}

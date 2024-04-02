@@ -1,0 +1,62 @@
+.container {
+   
+    margin-top: 60px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    
+}
+
+/* Adjust as needed */
+.column:first-child {
+    margin-right: 10px;
+}
+
+.column:last-child {
+    margin-left: 10px;
+}
+.p{
+    color:  #B52B00;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 110px;
+   
+}
+/* Define a class for horizontal line */
+.div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    gap: 20px;
+    margin-top: 20px;
+    /* Gap between grid items */
+}
+
+.div img {
+    width: 100%;
+    /* Ensure images fill the grid cells */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.div p {
+    margin: 5px 0;
+    /* Adjust spacing */
+}
+.butt{
+    padding: 10px 0px;
+        background-color: #FFD600;;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        /* Set border-radius to 0 for a rectangular shape */
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+}

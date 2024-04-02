@@ -9,7 +9,11 @@ import LoginPage from './pages/LoginPage'
 import FilterPage from './pages/FilterPage';
 import SingleProductPage from './pages/SingleProductPage'
 import CartPage from "./pages/CartPage"
-
+import CheckoutPage from './pages/CheckoutPage'
+import Success from './pages/success'
+import { Home } from '@mui/icons-material'
+import HomePage1 from "./pages/HomePage1"
+import List from "./pages/List"
 
 
 function App() {
@@ -18,16 +22,20 @@ function App() {
   return (
     <>
    <Routes>
-    <Route path='/'element={<HomePage/>}/>
+    <Route path='/home'element={<HomePage/>}/>
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/products' element={<FilterPage />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/' element={<HomePage1 />} />
+        <Route path='/list' element={<List />} />
+       
        
         
  
         <Route path="/product/:productId" element={<SingleProductPage />} />
-
+         <Route path="/all" element={<CheckoutPage/>}></Route>
+        <Route path="/thank-you" element={<Success />}></Route>
       
 
    </Routes>
@@ -36,4 +44,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

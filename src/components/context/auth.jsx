@@ -19,6 +19,7 @@
 //                 ...auth,
 //                 user: parseData.user,
 //                 token: parseData.token,
+//                 userId : parseData.userId
 //             });
 //         }
 //         //eslint-disable-next-line
@@ -34,87 +35,6 @@
 // const useAuth = () => useContext(AuthContext);
 
 // export { useAuth, AuthProvider };
-
-// // // authContext.js
-// // // import { useState, useEffect, useContext, createContext } from "react";
-// // // import axios from "axios";
-
-// // // const AuthContext = createContext();
-// // // const AuthProvider = ({ children }) => {
-// // //     const [auth, setAuth] = useState({
-// // //         user: null,
-// // //         token: "",
-// // //     });
-
-// // //     //default axios
-// // //     axios.defaults.headers.common["Authorization"] = auth?.token;
-
-// // //     useEffect(() => {
-// // //         const data = localStorage.getItem("auth");
-// // //         if (data) {
-// // //             const parseData = JSON.parse(data);
-// // //             setAuth({
-// // //                 ...auth,
-// // //                 user: parseData.user,
-// // //                 token: parseData.token,
-// // //             });
-// // //         }
-// // //         //eslint-disable-next-line
-// // //     }, []);
-// // //     return (
-// // //         <AuthContext.Provider value={[auth, setAuth]}>
-// // //             {children}
-// // //         </AuthContext.Provider>
-// // //     );
-// // // };
-
-// // // // custom hook
-// // // const useAuth = () => useContext(AuthContext);
-
-// // // export { useAuth, AuthProvider };
-
-// // // import { useState, useEffect, useContext, createContext } from "react";
-// // // import axios from "axios";
-
-// // // const AuthContext = createContext();
-// // // const AuthProvider = ({ children }) => {
-// // //     const [auth, setAuth] = useState({
-// // //         user: null,
-// // //         token: "",
-// // //     });
-
-// // //     //default axios
-// // //     axios.defaults.headers.common["Authorization"] = auth?.token;
-
-// // //     useEffect(() => {
-// // //         const data = localStorage.getItem("auth");
-// // //         if (data) {
-// // //             const parseData = JSON.parse(data);
-// // //             setAuth({
-// // //                 ...auth,
-// // //                 user: parseData.user,
-// // //                 token: parseData.token,
-// // //             });
-// // //         }
-// // //         //eslint-disable-next-line
-// // //     }, []);
-// // //     return (
-// // //         <AuthContext.Provider value={[auth, setAuth]}>
-// // //             {children}
-// // //         </AuthContext.Provider>
-// // //     );
-// // // };
-
-// // // // custom hook
-// // // const useAuth = () => useContext(AuthContext);
-
-// // // export { useAuth, AuthProvider };
-
-
-
-
-
-
 
 // import { useState, useEffect, useContext, createContext } from "react";
 // import axios from "axios";
@@ -124,6 +44,7 @@
 //     const [auth, setAuth] = useState({
 //         user: null,
 //         token: "",
+//         userId: "",
 //     });
 
 //     //default axios
@@ -132,15 +53,16 @@
 //     useEffect(() => {
 //         const data = localStorage.getItem("auth");
 //         if (data) {
-//             const parseData = JSON.parse(data);
+//             const parsedData = JSON.parse(data);
 //             setAuth({
-//                 ...auth,
-//                 user: parseData.user,
-//                 token: parseData.token,
+//                 user: parsedData.user,
+//                 token: parsedData.token,
+//                 userId: parsedData.userId // Fetch userId from localStorage
 //             });
 //         }
 //         //eslint-disable-next-line
 //     }, []);
+
 //     return (
 //         <AuthContext.Provider value={[auth, setAuth]}>
 //             {children}
@@ -153,94 +75,35 @@
 
 // export { useAuth, AuthProvider };
 
-
-// // AuthContext.js
-// import React, { createContext, useContext, useState } from 'react';
-
-// const AuthContext = createContext();
-
-// export const AuthProvider = ({ children }) => {
-//     const [user, setUser] = useState(null);
-
-//     const login = (userData) => {
-//         setUser(userData);
-//     };
-
-//     const logout = () => {
-//         setUser(null);
-//     };
-
-//     return (
-//         <AuthContext.Provider value={{ user, login, logout }}>
-//             {children}
-//         </AuthContext.Provider>
-//     );
-// };
-
-// export const useAuth = () => useContext(AuthContext);
-
-// import { useState, useEffect, useContext, createContext } from "react";
-// import axios from "axios";
-
-// const AuthContext = createContext();
-// const AuthProvider = ({ children }) => {
-//     const [auth, setAuth] = useState({
-//         user: null,
-//         token: "",
-//     });
-
-//     //default axios
-//     axios.defaults.headers.common["Authorization"] = auth?.token;
-
-//     useEffect(() => {
-//         const data = localStorage.getItem("auth");
-//         if (data) {
-//             const parseData = JSON.parse(data);
-//             setAuth({
-//                 ...auth,
-//                 user: parseData.user,
-//                 token: parseData.token,
-//             });
-//         }
-//         //eslint-disable-next-line
-//     }, []);
-//     return (
-//         <AuthContext.Provider value={[auth, setAuth]}>
-//             {children}
-//         </AuthContext.Provider>
-//     );
-// };
-
-// // custom hook
-// const useAuth = () => useContext(AuthContext);
-
-// export { useAuth, AuthProvider };
 
 import { useState, useEffect, useContext, createContext } from "react";
 import axios from "axios";
 
 const AuthContext = createContext();
+
 const AuthProvider = ({ children }) => {
     const [auth, setAuth] = useState({
         user: null,
         token: "",
+        userId: "", // Initialize userId
     });
 
-    //default axios
+    // Set default axios headers
     axios.defaults.headers.common["Authorization"] = auth?.token;
 
     useEffect(() => {
         const data = localStorage.getItem("auth");
         if (data) {
-            const parseData = JSON.parse(data);
+            const parsedData = JSON.parse(data);
             setAuth({
-                ...auth,
-                user: parseData.user,
-                token: parseData.token,
+                user: parsedData.user,
+                token: parsedData.token,
+                userId: parsedData.userId // Fetch userId from localStorage
             });
         }
         //eslint-disable-next-line
     }, []);
+
     return (
         <AuthContext.Provider value={[auth, setAuth]}>
             {children}
@@ -248,7 +111,6 @@ const AuthProvider = ({ children }) => {
     );
 };
 
-// custom hook
 const useAuth = () => useContext(AuthContext);
 
 export { useAuth, AuthProvider };

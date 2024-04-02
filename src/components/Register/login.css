@@ -1,0 +1,81 @@
+/* login.css */
+
+/* .container {
+  
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+   margin-left: 780px;
+    
+} */
+.Card p-6{
+  height: 30%;
+          
+}
+
+.card {
+    margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        /* Set the width of the card */
+        max-width: 40%;
+        /* Ensure the card doesn't exceed the container width */
+        height: 30%;
+        /* Automatically adjust height based on content */
+    }
+
+h4 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.input-control {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color:#2E0052;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.bk{
+    background-color: white;
+        color:black;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 140px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 1px solid #BDBDBD;
+        margin-left: 40px;
+}

@@ -14,15 +14,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* 4 cards per row */
-    gap: 20px;
+ 
+   
 }
 
 .product-card {
    
-    padding: 10px;
-    border-radius: 5px;
+    padding: 5px;
+    border-radius: 90px;
   
-margin-left: 40px;
+margin-left: 60px;
+margin-right: 60px;
 
 }
 
@@ -63,4 +65,39 @@ select {
 .col-md-6 img{
     width: 50%;
         height: auto;
+}
+.filter-dropdown select {
+    additive-symbols: grid-view-rounded;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 8px;
+    /* Add margin for spacing between dropdowns */
+}
+.search-input {
+   
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-input input[type="text"] {
+    width: 92%;
+    padding: 10px;
+    border-radius: 20px;
+    /* Set border-radius to make oval shape */
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-input input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.search-input i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
 }

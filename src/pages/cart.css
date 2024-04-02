@@ -1,71 +1,71 @@
-/* CartPage.css */
-
-/* Container for the entire cart page */
-.cart-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+.container{
+    margin-top: 80px;
+}
+.col-md-8{
+    border: 1px;
+    margin-top: 90px;
+}
+.col-md-12{
+    text-align: center;
 }
 
-/* Title of the cart page */
-.cart-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+
+.col-md-4 text-center{
+    margin-top: 80px;
+}
+.btn-btn1 {
+    padding: 10px 90px;
+        background-color: #FFD600;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        /* Set border-radius to 0 for a rectangular shape */
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 0px;
+        margin-top: 0px;
 }
 
-/* Welcome message for logged-in users */
-.welcome-message {
-    font-size: 18px;
-    margin-bottom: 10px;
+.card-img-top {
+    border: 1px solid #ccc;
+    /* Example border style */
 }
 
-/* Message for empty cart */
-.empty-cart-message {
-    font-size: 18px;
-    color: #666;
+/* Style for the border around each cart item */
+.cart-item {
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the border */
+    margin-bottom: 10px; /* Spacing between items */
 }
 
-/* Summary of total products in cart */
-.cart-summary {
-    font-size: 16px;
-    margin-top: 20px;
+/* Style for the border between sections within each cart item */
+.cart-item > div {
+    border-right: 1px solid #ccc; /* Border between sections */
+    padding: 5px 10px; /* Padding inside each section */
 }
 
-/* List of products in the cart */
-.product-list {
-    list-style: none;
-    padding: 0;
+/* Style for the last section within each cart item */
+.cart-item > div:last-child {
+    border-right: none; /* Remove border-right for the last section */
 }
 
-/* Individual product item in the cart */
-.product-item {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
+/* Style for the image within each cart item */
+.cart-item img {
+    max-width: 100%; /* Ensure image fits within container */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Title of the product */
-.product-item h3 {
-    margin-bottom: 5px;
-    font-size: 18px;
+/* Style for the select dropdown within each cart item */
+.cart-item select {
+    width: 100%; /* Make select dropdown fill its container */
+    padding: 5px; /* Add padding */
+    margin-top: 5px; /* Add spacing */
 }
 
-/* Price of the product */
-.product-price {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Button to remove product from the cart */
-.remove-button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Style the remove button on hover */
-.remove-button:hover {
-    background-color: #c82333;
+/* Optional: Style for the total price section */
+.cart-item .total-price {
+    font-weight: bold; /* Make the total price text bold */
 }
