@@ -630,8 +630,9 @@ const ProductPage = () => {
 
     // Static options for color, price, and headphone type
     const colorOptions = ['Black', 'White', 'Red', 'Blue'];
-    const priceOptions = ['50', '100', '150', '200'];
-    const headphoneTypeOptions = ['Over-ear', 'On-ear', 'In-ear'];
+    const priceOptions = ['3500', '599', '1500', '1300','3990'];
+    const headphoneTypeOptions = ['Over-ear', 'In-ear', 'Over-ear '];
+    const Company = ['Featured','JBL','Sony','Boat','Zebronics','Marshall','Ptro']
 
     // Static options for company filter
     const companyOptions = ['sony', 'max', 'Company C'];
@@ -648,7 +649,7 @@ const ProductPage = () => {
                 {/* <input type="text" value={searchCompany} onChange={handleSearchCompanyChange} placeholder="Search by company" /> */}
                 <div className="filter-dropdown" >
                     <select value={titleFilter} onChange={handleTitleFilterChange}>
-                        <option value="">All Titles</option>
+                        <option value="">Short By</option>
                         {products.map(product => (
                             <option key={product.id} value={product.title}>{product.title}</option>
                         ))}
