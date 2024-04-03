@@ -631,7 +631,7 @@ const ProductPage = () => {
     // Static options for color, price, and headphone type
     const colorOptions = ['Black', 'White', 'Red', 'Blue'];
     const priceOptions = ['3500', '599', '1500', '1300','3990'];
-    const headphoneTypeOptions = ['Over-ear', 'In-ear', 'Over-ear '];
+    const headphoneTypeOptions = ['Over-ear headphone', 'In-ear headphone', 'Over-ear headphone '];
     const Company = ['Featured','JBL','Sony','Boat','Zebronics','Marshall','Ptro']
 
     // Static options for company filter
