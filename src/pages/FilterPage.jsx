@@ -545,13 +545,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductCard from "../components/Home/ProductCard";
 import "./home.css"
-import BorderAllIcon from '@mui/icons-material/BorderAll';
+import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 
 const ProductPage = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [titleFilter, setTitleFilter] = useState('');
+   
     const [companyFilter, setCompanyFilter] = useState('');
     const [colorFilter, setColorFilter] = useState('');
     const [priceFilter, setPriceFilter] = useState('');
@@ -579,9 +579,7 @@ const ProductPage = () => {
         // Apply filters based on title, company, and searchCompany
         const applyFilters = () => {
             let filtered = [...products];
-            if (titleFilter !== '') {
-                filtered = filtered.filter(product => product.title.toLowerCase() === titleFilter.toLowerCase());
-            }
+            
             if (companyFilter !== '') {
                 filtered = filtered.filter(product => product.company.toLowerCase() === companyFilter.toLowerCase());
             }
@@ -601,11 +599,9 @@ const ProductPage = () => {
         };
 
         applyFilters();
-    }, [titleFilter, companyFilter, colorFilter, priceFilter, headphoneTypeFilter, searchCompany, products]);
+    }, [ companyFilter, colorFilter, priceFilter, headphoneTypeFilter, searchCompany, products]);
 
-    const handleTitleFilterChange = (e) => {
-        setTitleFilter(e.target.value);
-    };
+   
 
     const handleCompanyFilterChange = (e) => {
         setCompanyFilter(e.target.value);
@@ -631,15 +627,16 @@ const ProductPage = () => {
     // Static options for color, price, and headphone type
     const colorOptions = ['Black', 'White', 'Red', 'Blue'];
     const priceOptions = ['3500', '599', '1500', '1300','3990'];
-    const headphoneTypeOptions = ['Over-ear headphone', 'In-ear headphone', 'Over-ear headphone '];
-    const Company = ['Featured','JBL','Sony','Boat','Zebronics','Marshall','Ptro']
+    const headphoneTypeOptions = ['Over-ear headphone', 'In-ear headphone', 'On-ear headphone '];
+    
 
     // Static options for company filter
-    const companyOptions = ['sony', 'max', 'Company C'];
+    const companyOptions = ['Featured','JBL','Sony','Boat','Zebronics','Marshall','Ptro'];
 
     return (
         <div className="App">
             <div className='header'>
+               
                 <div className="search-input">
                     <input type="text" value={searchCompany} onChange={handleSearchCompanyChange} placeholder="Search by company" />
 
@@ -648,13 +645,8 @@ const ProductPage = () => {
 
                 {/* <input type="text" value={searchCompany} onChange={handleSearchCompanyChange} placeholder="Search by company" /> */}
                 <div className="filter-dropdown" >
-                    <select value={titleFilter} onChange={handleTitleFilterChange}>
-                        <option value="">Short By</option>
-                        {products.map(product => (
-                            <option key={product.id} value={product.title}>{product.title}</option>
-                        ))}
-                    </select>
-
+                    
+                  
                     <select value={companyFilter} onChange={handleCompanyFilterChange}>
                         <option value="">All Companies</option>
                         {companyOptions.map((company, index) => (
@@ -682,7 +674,9 @@ const ProductPage = () => {
                             <option key={index} value={type}>{type}</option>
                         ))}
                     </select>
+                  
                 </div>
+                
 
 
             </div>

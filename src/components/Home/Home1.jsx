@@ -39,7 +39,7 @@ const HomePage1 = () => {
                         <h3 style={{ marginTop: "45px" }}>MusicCart</h3>
 
 
-                        <p style={{ marginTop: "50px", marginLeft: "40px" }}>Home/invoise</p>
+                        <p style={{ marginTop: "50px", marginLeft: "40px" }}>Home</p>
                         {/* Right Side Menu */}
                         <div className="navbar-collapse justify-content-end">
                             <ul className="navbar-nav">

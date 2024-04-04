@@ -3,6 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
 import "./Header.css"
+import PhonePausedOutlinedIcon from '@mui/icons-material/PhonePausedOutlined';
+
 
 
 import { useCart } from "../context/cart";
@@ -26,7 +28,7 @@ const Header = () => {
            
             <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#2E0052' }}>
                 <div className="container-fluid">
-                    <div className="navbar-brand text-center">912121131313</div>
+                    <div className="navbar-brand text-center"><PhonePausedOutlinedIcon/>912121131313</div>
                     <div className="navbar-brand text-center" style={{ width: '1700px' }}>
                         Get 50% off on selected items | Shop Now 
                     </div>

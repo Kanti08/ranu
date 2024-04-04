@@ -106,14 +106,15 @@ const CartPage = () => {
 
     return (
         <Layout>
+           
+
+            <Navba/>
             <button
                 className="button3"
                 onClick={HomePage}
             >
                 Back TO Product
             </button>
-
-            <Navba/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
@@ -185,7 +186,7 @@ const CartPage = () => {
                             <h4>Total Amount</h4>
                             <h5>{auth?.user?.address}</h5>
                             <button
-                                className="btn "
+                                className="btn-btn1 "
                                 onClick={() => navigate("/all")}
                             >
                                 placeOrder

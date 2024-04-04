@@ -14,6 +14,8 @@ import Success from './pages/success'
 import { Home } from '@mui/icons-material'
 import HomePage1 from "./pages/HomePage1"
 import List from "./pages/List"
+import Invoice from "./pages/Invoice"
+import InvoiceSingle from "./pages/InovoiceSingle"
 
 
 function App() {
@@ -29,6 +31,10 @@ function App() {
         <Route path='/cart' element={<CartPage />} />
         <Route path='/' element={<HomePage1 />} />
         <Route path='/list' element={<List />} />
+        <Route path='/fetch/:orderId' element={<InvoiceSingle />} />
+
+
+        <Route path='/invoice' element={<Invoice />} />
        
        
         
