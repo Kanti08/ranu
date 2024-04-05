@@ -546,6 +546,7 @@ import axios from 'axios';
 import ProductCard from "../components/Home/ProductCard";
 import "./home.css"
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
+import { BASE_URL } from '../../util';
 
 const ProductPage = () => {
     const [products, setProducts] = useState([]);
@@ -563,7 +564,7 @@ const ProductPage = () => {
     useEffect(() => {
         async function fetchProducts() {
             try {
-                const response = await axios.get('http://localhost:8001/api/products/product');
+                const response = await axios.get(`${BASE_URL}/api/products/product`);
                 setProducts(response.data);
                 setLoading(false);
             } catch (error) {
