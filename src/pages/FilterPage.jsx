@@ -564,7 +564,7 @@ const ProductPage = () => {
     useEffect(() => {
         async function fetchProducts() {
             try {
-                const response = await axios.get(`${BASE_URL}/api/products/product`);
+                const response = await axios.get(`${BASE_URL}api/products/product`);
                 setProducts(response.data);
                 setLoading(false);
             } catch (error) {

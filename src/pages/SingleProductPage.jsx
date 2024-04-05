@@ -117,7 +117,7 @@ const SingleProductPage = () => {
                 userName: auth?.user?.name // Include user's name in the request data
             };
 
-            const response = await axios.post('http://localhost:8001/api/cart/add', requestData);
+            const response = await axios.post(`${BASE_URL}/api/cart/add`, requestData);
             setCart([...cart, product]);
             localStorage.setItem("cart", JSON.stringify([...cart, product]));
             toast.success(response.data.message);
